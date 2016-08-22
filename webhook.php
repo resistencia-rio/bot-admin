@@ -33,7 +33,7 @@ echo '</pre>';
 $telegram = new Api($config['token']);
 $response = $telegram->setWebhook([
     'url' => 'https://'.$url,
-    'certificate' => 'https://'.$url
+    'certificate' => $certificate
 ]);
 echo '<pre>';
 var_dump([
