@@ -38,4 +38,7 @@ if($update->has('message')) {
                         "Manual em texto:  http://bit.ly/rspmnlv2\n\nManual em video: https://youtu.be/hSxBkKeO7-Y",
                     'parse_mode' => 'HTML'
                 ]);
+        }
+    }
 }
+
