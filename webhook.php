@@ -30,10 +30,13 @@ echo '<pre>';
 echo $certificate;
 echo '</pre>';
 
+$temp = tmpfile();
+fwrite($temp, $certificate);
+
 $telegram = new Api($config['token']);
 $response = $telegram->setWebhook([
     'url' => 'https://'.$url,
-    'certificate' => $certificate
+    'certificate' => $temp
 ]);
 echo '<pre>';
 var_dump([
