@@ -31,10 +31,10 @@ echo $certificate;
 echo '</pre>';
 
 $telegram = new Api($config['token']);
-$response = $telegram->setWebhook(
-    'https://'.$url,
-    $certificate
-);
+$response = $telegram->setWebhook([
+    'url' => 'https://'.$url,
+    'certificate' => $certificate
+]);
 echo '<pre>';
 var_dump([
     'url' => 'https://'.$url,
